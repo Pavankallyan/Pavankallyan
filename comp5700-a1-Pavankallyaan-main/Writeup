@@ -1,0 +1,23 @@
+1. Describe choices you made in your code that you feel are important. Mention any specific aspects of your implementation that might be interesting as I evaluate your program.
+
+- I implemented DFS (Depth-First Search) and UCS (Uniform Cost Search) as required by the assignment. DFS is fast and simple, whereas UCS is guaranteed to find the shortest path.
+- I added cycle detection in DFS through the use of a visited set so that the same locations are not revisited. This makes it efficient for grids with loops.
+- I used a priority queue which implements Heap for UCS so that the robot will always take the path with the least cost. I used a visited set or so-called closed list in order not to explore the states that have been processed.
+- I have made the format of the output clear and readable, including what the robot does - U, D, L, R - and the statistics of how many nodes were generated and expanded.
+
+2. Which of your implemented algorithms are admissible?
+
+- UCS (Uniform Cost Search): It is admissible because it always finds the shortest and optimal path if all the movement costs are the same, which is given in this problem.
+- DFS: DFS is inadmissible; it does not guarantee the optimal path. It might explore a longer path instead of the best one.
+
+3. 
+
+The state space relies on:
+- Width W x Height H size of the grid, so possible locations for the robot are.
+- Number of samples, S: for each sample, it may be collected or not. So, there are 2^S possible states concerning the samples.
+ 
+4. What suggestions do you have for improving this assignment?
+
+More input examples would be helpful, especially for corner cases such as no samples on the grid or very large grids with a lot of obstacles.
+- More detailed guidelines on how the sw-validator.jar tool should be used, including whether or not to include statistics in the output.
+- Allowing the students to implement other algorithms, such as A* or Breadth-First Search, could make the assignment more interesting and flexible.

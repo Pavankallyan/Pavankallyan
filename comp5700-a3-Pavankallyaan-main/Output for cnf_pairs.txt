@@ -1,0 +1,135 @@
+~/PycharmProjects/comp5700-a3-Pavankallyaan git:[main]
+python3 TheoremProver.py < cnf_pairs/p1.cnf
+Input Clauses:
+1. -Human(x1) | Mortal(x1)
+2. Human(Socrates)
+
+Unified Clauses:
+-Human(Socrates) | Mortal(Socrates)
+Human(Socrates)
+
+Attempted 2 unifications.
+-------------------------------------------------------
+
+
+~/PycharmProjects/comp5700-a3-Pavankallyaan git:[main]
+python3 TheoremProver.py < cnf_pairs/p2.cnf
+Input Clauses:
+1. P(x, y, A, B, w)
+2. -P(e, C, f, g, f)
+
+Unified Clauses:
+P(e, C, A, B, A)
+-P(e, C, A, B, A)
+
+Attempted 1 unifications.
+-------------------------------------------------------
+
+
+~/PycharmProjects/comp5700-a3-Pavankallyaan git:[main]
+python3 TheoremProver.py < cnf_pairs/p3.cnf
+Input Clauses:
+1. -Human(x, Socrates) | Mortal(x)
+2. Human(y, y) | -Mortal(y)
+
+Unified Clauses:
+-Human(y, Socrates) | Mortal(y)
+Human(Socrates, Socrates) | -Mortal(Socrates)
+
+-Human(y, Socrates) | Mortal(y)
+Human(y, y) | -Mortal(y)
+
+Attempted 4 unifications.
+-------------------------------------------------------
+
+
+~/PycharmProjects/comp5700-a3-Pavankallyaan git:[main]
+python3 TheoremProver.py < cnf_pairs/p4.cnf
+Input Clauses:
+1. P(y, A, B, y)
+2. -P(C, f, g, f)
+
+Unified Clauses:
+Attempted 1 unifications.
+-------------------------------------------------------
+
+
+~/PycharmProjects/comp5700-a3-Pavankallyaan git:[main]
+python3 TheoremProver.py < cnf_pairs/p5.cnf
+Input Clauses:
+1. -A(x, C) | B(x)
+2. -B(y) | A(y, y)
+
+Unified Clauses:
+-A(y, C) | B(y)
+-B(C) | A(C, C)
+
+-A(y, C) | B(y)
+-B(y) | A(y, y)
+
+Attempted 4 unifications.
+-------------------------------------------------------
+
+
+~/PycharmProjects/comp5700-a3-Pavankallyaan git:[main]
+python3 TheoremProver.py < cnf_pairs/p6.cnf
+Input Clauses:
+1. P(x, y, y)
+2. -P(e, e, f)
+
+Unified Clauses:
+P(e, e, e)
+-P(f, f, f)
+
+Attempted 1 unifications.
+-------------------------------------------------------
+
+
+~/PycharmProjects/comp5700-a3-Pavankallyaan git:[main]
+python3 TheoremProver.py < cnf_pairs/p7.cnf
+Input Clauses:
+1. -Human(x, Socrates) | Mortal(x)
+2. Human(y, y) | -Mortal(y) | Human(y, z)
+
+Unified Clauses:
+-Human(y, Socrates) | Mortal(y)
+Human(Socrates, Socrates) | -Mortal(Socrates) | Human(Socrates, z)
+
+-Human(y, Socrates) | Mortal(y)
+Human(y, y) | -Mortal(y) | Human(y, Socrates)
+
+-Human(y, Socrates) | Mortal(y)
+Human(y, y) | -Mortal(y) | Human(y, z)
+
+Attempted 6 unifications.
+-------------------------------------------------------
+
+
+~/PycharmProjects/comp5700-a3-Pavankallyaan git:[main]
+python3 TheoremProver.py < cnf_pairs/p8.cnf
+Input Clauses:
+1. -A(B) | -B(x)
+2. A(A) | B(B)
+
+Unified Clauses:
+-A(B) | -B(B)
+A(A) | B(B)
+
+Attempted 4 unifications.
+-------------------------------------------------------
+
+
+~/PycharmProjects/comp5700-a3-Pavankallyaan git:[main]
+python3 TheoremProver.py < cnf_pairs/p9.cnf
+Input Clauses:
+1. -A(x, C) | B(x)
+2. A(y, y) | -B(y)
+
+Unified Clauses:
+-A(y, C) | B(y)
+A(C, C) | -B(C)
+
+-A(y, C) | B(y)
+A(y, y) | -B(y)
+
+Attempted 4 unifications.

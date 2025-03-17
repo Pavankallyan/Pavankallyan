@@ -1,0 +1,6 @@
+-Human(x1) | Mortal(x1)
+Human(Socrates)
+Animal(x2) | Loves(x3, x2)
+-Loves(x4, x5) | Loves(x5, x4)
+--- negated query ---
+-Mortal(Socrates)

@@ -1,0 +1,2 @@
+-Human(x, Socrates) | Mortal(x)
+Human(y, y) | -Mortal(y)

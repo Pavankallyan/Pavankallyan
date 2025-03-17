@@ -1,0 +1,58 @@
+1. Describe the two heuristic functions you designed for A*, and describe why they are admissible.
+
+I created two heuristic functions for the A* algorithm:
+
+h1 Manhattan Distance Heuristic: This heuristic calculates the sum of absolute differences in row and column indices between the current 
+position and the nearest remaining sample. It is admissible because it never overestimates the actual cost to reach a goal state. Since 
+movement is restricted to four cardinal directions and each move has a uniform cost of 1, this heuristic provides an optimistic estimate of 
+the remaining cost.
+
+h2: Chebyshev Distance Heuristic. This heuristic considers the maximum absolute difference of the row and column 
+indices between the current position and the nearest remaining sample. It is admissible, too, because it gives a 
+lower bound on the number of moves when diagonal movements are not allowed. Many times, this heuristic performs better than 
+h1 in terms of reducing the number of nodes explored with still an admissible estimate.
+
+Both heuristics are admissible because neither method ever overestimates the cost to collect all the samples.
+
+
+
+2. Which of your implemented algorithms are admissible?
+
+DFS (Depth-First Search): Not admissible. DFS will never guarantee an optimum solution since it explores a path deeply without 
+considering the cost of that path.
+
+UCS: It is admissible since UCS expands the lowest-cost node first.
+
+IDS (Iterative Deepening Depth-First Search): Admissible. IDS incrementally increases the depth limit and, in such a way, it mimics BFS, 
+hence guaranteeing optimality in uniformly costed settings.
+
+A (A-Star Search)**: With h1 and h2: Both heuristics are specifically designed to be optimistic estimates about the cost and thus 
+keep A optimal and complete.
+
+
+
+3. Describe choices you made in your code that you feel are important. Mention any specific aspects of
+your implementation that might be interesting as I evaluate your program.
+
+State Representation: Any state in the search will comprise an agent's position, a set of samples collected, and the path followed. 
+This would ensure proper book-keeping of sample collections.
+Avoiding Cycles: DFS, IDS, A* make use of visited states to avoid redundant explorations of previously visited states.
+
+Choice of Data Structures:
+
+UCS and A* relied on the use of priority queues offered by heapq for efficient node expansion.
+DFS and IDS used stacks for depth-first explorations.
+This is ensured by the visited dictionary in UCS and A*, such that states are only revisited if they have a lower cost.
+A* Performance Optimization*: Heuristics have been developed in such a way that computational efficiency is maximized with admissibility 
+to ensure A* expands the fewest nodes possible while still returning an optimal path.
+
+
+
+4. What suggestions do you have for improving this assignment?
+
+More Complex Worlds: Introducing more varied world layouts, such as obstacles and larger maps, would make the problem more interesting and highlight 
+the advantages of different algorithms. Performance Benchmarks: It would be better if the assignment required students to compare 
+the efficiency of different search methods in terms of nodes expanded and generated. Alternative Movement Rules: Allowing diagonal 
+movement as an optional feature would create an opportunity to explore different heuristic designs.
+This implementation embodies all the details of the assignment, hence providing a structured approach toward the solution 
+for the Sample World problem efficiently.

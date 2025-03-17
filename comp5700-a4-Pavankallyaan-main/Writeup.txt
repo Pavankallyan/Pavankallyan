@@ -1,0 +1,62 @@
+1. Important Code Choices
+
+Ans-
+
+1. Clause Representation with `frozenset`
+   - Each clause is stored as a `frozenset` of literals to eliminate duplicates and ensure efficient equality checks.
+   - Example: `Clause([Literal(...)])` becomes `Clause(frozenset(...))`.
+
+2. Variable Standardization:
+   - Variables are renamed with a unique suffix (e.g., `x_1`, `x_2`) during resolution to prevent naming conflicts between clauses.
+   - Example: `x` in clause 1 becomes `x_1` when resolved with clause 2.
+
+3. Efficient Clause Management:
+   - A `clause_map` (dictionary) tracks clauses by their content for O(1) lookups to avoid duplicates.
+   - Clauses are assigned unique IDs for quick indexing.
+
+4. Early Termination:
+   - The prover stops immediately when the empty clause (`<empty>`) is derived, avoiding redundant steps.
+
+5. Breadth-First Resolution:
+   - Uses a `deque` to process clauses in FIFO order, ensuring breadth-first exploration of the search space.
+
+
+2. Time Complexity Analysis
+The time complexity of the theorem prover depends on two key factors:
+
+Ans-
+
+1. Number of Clauses (n): Each clause can potentially resolve with every other clause.
+2. Literals per Clause (k): Unifying literals pairwise adds overhead proportional to the number of terms.
+
+- Worst-Case Complexity:
+  $$O(n^2 \cdot k)$$
+  - Resolving all pairs of clauses takes \(O(n^2)\).
+  - Unifying literals in each pair takes \(O(k)\) due to term comparisons.
+
+- Mitigations:
+  - The Set-of-Support strategy reduces \(n\) by focusing only on relevant clauses.
+  - Early termination avoids unnecessary resolutions after deriving the empty clause.
+
+
+3. Suggestions for Improvement
+
+Ans-
+
+1. Depth Limit:
+   - Add a maximum depth parameter to prevent infinite loops in unprovable cases.
+
+2. Heuristic Prioritization:
+   - Use heuristic metrics (e.g., clause length, number of variables) to prioritize promising resolutions.
+
+3. Subsumption Checks:
+   - Remove subsumed clauses (e.g., if clause \(A \subseteq B\), discard \(B\)).
+
+4. Equality Handling:
+   - Extend unification to handle equality predicates (e.g., `x = y`).
+
+5. Verbose Debugging:
+   - Add a debug mode to log unification substitutions and intermediate steps.
+
+6. Test Case Expansion:
+   - Include more complex examples (e.g., nested predicates, cyclic dependencies).

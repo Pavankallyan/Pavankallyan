@@ -1,0 +1,4 @@
+-Man(x) | Mortal(x)
+Man(Socrates)
+--- negated query ---
+-Mortal(Socrates)

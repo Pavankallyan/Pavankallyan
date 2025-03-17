@@ -1,0 +1,4 @@
+-Man(x) | Mortal(x)
+-Man(TreeBeard)
+--- negated query ---
+-Mortal(TreeBeard)

@@ -1,0 +1,3 @@
+P(x, y, A, B, w)
+--- negated query ---
+-P(e, C, f, g, f)

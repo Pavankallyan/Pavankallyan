@@ -1,0 +1,24 @@
+1. Describe choices you made in your code that you feel are important. Mention any specific aspects of
+your implementation that might be interesting as I evaluate your program.
+
+Ans
+
+Important Code Choices
+
+a. Structured Literal Representation
+
+Literal Class: Each literal is parsed into an object with negated, predicate, and terms attributes. This simplifies substitution logic and ensures consistent handling of literals during unification.
+
+b. Unification Algorithm
+
+Term-Level Unification: Variables (lowercase) and constants (uppercase) are unified using a substitution dictionary. Variables are recursively resolved to avoid conflicts (e.g., unify_term checks for variable-constant or variable-variable pairs).
+Complementary Check: Unification is only attempted if two literals have the same predicate, opposite negation, and matching arity (number of terms).
+
+
+2. What suggestions do you have for improving this assignment?
+
+Ans
+
+Edge Cases:
+Multiple complementary literals in a single clause.
+Variable renaming conflicts (eg. x in both clauses).

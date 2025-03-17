@@ -1,0 +1,3 @@
+-A(x, x, x1)
+--- negated query ---
+A(Q, S, R)

@@ -1,0 +1,6 @@
+-Man(x) | Mortal(x)
+-Mortal(y) | -God(y)
+God(z) | CanDie(z)
+Man(Socrates)
+--- negated query ---
+-CanDie(Socrates)

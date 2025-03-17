@@ -1,0 +1,9 @@
+A(x) | -B(x)
+B(C1) | B(C2) | B(C3)
+C(y) | -B(y)
+-C(C1)
+-C(C2)
+-A(C1)
+-A(C2)
+--- negated query ---
+-A(C3)
