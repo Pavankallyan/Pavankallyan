@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wentworth Database</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Wentworth Database</h1>
+        
+        <form method="POST">
+            <div class="search-box">
+                <input type="text" name="query" placeholder="Enter your SQL query here" required>
+                <button type="submit">Search</button>
+            </div>
+        </form>
+
+        {% if results %}
+        <div class="results">
+            <table>
+                {% if results[0] is defined and 'error' not in results[0] %}
+                <thead>
+                    <tr>
+                        {% for key in results[0].keys() %}
+                        <th>{{ key }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                {% endif %}
+                
+                <tbody>
+                    {% for row in results %}
+                    <tr>
+                        {% if 'error' in row %}
+                        <td colspan="{{ results[0].keys()|length }}" class="error">{{ row.error }}</td>
+                        {% else %}
+                            {% for value in row.values() %}
+                            <td>{{ value }}</td>
+                            {% endfor %}
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
