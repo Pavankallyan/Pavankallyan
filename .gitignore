@@ -16,3 +16,5 @@ __pycache__/
 # Large model files (optional - uncomment if too large)
 # models/*.pth
 # models/*.pkl
+*.pth
+*.pkl
