@@ -1,0 +1,18 @@
+# Virtual environment
+venv/
+
+# Dataset (too large - 2.3GB)
+data/raw/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Mac files
+.DS_Store
+
+# Large model files (optional - uncomment if too large)
+# models/*.pth
+# models/*.pkl
