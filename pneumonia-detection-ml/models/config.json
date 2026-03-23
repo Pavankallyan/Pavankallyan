@@ -1,0 +1,19 @@
+{
+    "train_dir": "../data/raw/chest_xray/chest_xray/train",
+    "val_dir": "../data/raw/chest_xray/chest_xray/val",
+    "test_dir": "../data/raw/chest_xray/chest_xray/test",
+    "img_size": 224,
+    "batch_size": 32,
+    "num_classes": 2,
+    "class_names": [
+        "NORMAL",
+        "PNEUMONIA"
+    ],
+    "class_to_idx": {
+        "NORMAL": 0,
+        "PNEUMONIA": 1
+    },
+    "train_size": 5216,
+    "test_size": 624,
+    "device": "mps"
+}
