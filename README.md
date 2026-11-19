@@ -27,6 +27,14 @@
 
 
 
+
+# 📊 GitHub Stats:
+<p align="left">
+<a href="https://github.com/Pavankallyan"><img src="https://github-readme-stats.vercel.app/api?username=Pavankallyan&show_icons=true&theme=default" alt="Pavan's GitHub stats" /></a>
+<a href="https://github.com/Pavankallyan"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pavankallyan&layout=compact&theme=default" alt="Top languages" /></a>
+</p>
+
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/pavankallyan/pavankallyan/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/pavankallyan/pavankallyan/output/github-snake.svg" />
